@@ -40,11 +40,14 @@ class ViewController: UIViewController {
                             }
                         }
                     }
-                    // Save each school to Firebase
                     for school in schoolList {
+                        // Save each school to Firebase
                         let schoolsRef = FirebaseService.shared.schoolsRef
                         let schoolRef = schoolsRef?.child(school.name)
                         schoolRef?.setValue(school.toDict())
+                        // Save each school's location to Geofire
+                        let geofireRef = FirebaseService.shared.geoFire
+                        geofireRef?.setLocation(school.location, forKey: school.name)
                     }
                     
                 } catch {

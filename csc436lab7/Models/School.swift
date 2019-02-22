@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import MapKit
 
-class School {
+class School: NSObject, MKAnnotation {
     let name: String
     let city: String?
     let state: String?
@@ -16,10 +17,16 @@ class School {
     let contact_email: String?
     let latitude: Double
     let longitude: Double
+    var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+    var location: CLLocation {
+        return CLLocation(latitude: latitude, longitude: longitude)
+    }
     
     // zip, latitude, and longitude are garunteed after filtering
     init(school: SchoolService.School) {
-        name = school.name
+        name = school.name.replacingOccurrences(of: ".", with: "")
         city = school.city
         state = school.state
         zip = school.zip!

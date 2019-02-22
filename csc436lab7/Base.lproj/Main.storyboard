@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WO1-Yg-Tjx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -50,13 +50,26 @@
                     <view key="view" contentMode="scaleToFill" id="BRt-37-cLg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="l0y-OI-Ckz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l0y-OI-Ckz" firstAttribute="width" secondItem="BRt-37-cLg" secondAttribute="width" id="QeK-pP-0X0"/>
+                            <constraint firstItem="l0y-OI-Ckz" firstAttribute="height" secondItem="BRt-37-cLg" secondAttribute="height" id="Uqn-jX-bst"/>
+                            <constraint firstItem="l0y-OI-Ckz" firstAttribute="centerX" secondItem="hVK-Gl-CC9" secondAttribute="centerX" id="XW5-jf-MnJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hVK-Gl-CC9"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="l0y-OI-Ckz" id="nTX-SR-ah6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOp-Ib-LEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084" y="17"/>
+            <point key="canvasLocation" x="1133.5999999999999" y="16.641679160419791"/>
         </scene>
     </scenes>
 </document>
