@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Used to read in JSON object from https://cod.org/shools.json
 struct SchoolService: Codable {
     
     let schools: [School]

@@ -8,20 +8,27 @@
 
 import Foundation
 import MapKit
+import FirebaseDatabase
 
-class School: NSObject, MKAnnotation {
-    let name: String
-    let city: String?
-    let state: String?
-    let zip: String
-    let contact_email: String?
-    let latitude: Double
-    let longitude: Double
+class School: NSObject, MKAnnotation, Codable {
+    var name: String
+    var city: String?
+    var state: String?
+    var zip: String
+    var contact_email: String?
+    var latitude: Double
+    var longitude: Double
     var coordinate: CLLocationCoordinate2D {
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
     var location: CLLocation {
         return CLLocation(latitude: latitude, longitude: longitude)
+    }
+    var title: String? {
+        return name
+    }
+    var subtitle: String? {
+        return city
     }
     
     // zip, latitude, and longitude are garunteed after filtering
@@ -33,6 +40,25 @@ class School: NSObject, MKAnnotation {
         contact_email = school.contact_email
         latitude = school.latitude!
         longitude = school.longitude!
+        super.init()
+    }
+    
+    // Initiate a School object given the data received from a Geofire query
+    init(key: String, snapshot: DataSnapshot) {
+        name = key
+        
+        let snaptemp = snapshot.value as! [String : AnyObject]
+        let snapvalues = snaptemp[key] as! [String : AnyObject]
+        
+        name = snapvalues["name"] as? String ?? "N/A"
+        city = snapvalues["city"] as? String ?? "N/A"
+        state = snapvalues["state"] as? String ?? "N/A"
+        zip = snapvalues["zip"] as? String ?? "N/A"
+        contact_email = snapvalues["contact_email"] as? String ?? "N/A"
+        latitude = snapvalues["latitude"] as? Double ?? 0.0
+        longitude = snapvalues["longitude"] as? Double ?? 0.0
+        
+        super.init()
     }
     
     func toDict() -> [String : Any] {

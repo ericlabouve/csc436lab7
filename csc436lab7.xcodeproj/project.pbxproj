@@ -21,6 +21,7 @@
 		48151259222074D300E0AAEF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48151258222074D300E0AAEF /* MapViewController.swift */; };
 		4815125B2220753C00E0AAEF /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4815125A2220753B00E0AAEF /* FirebaseService.swift */; };
 		481512602220788F00E0AAEF /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4815125F2220788F00E0AAEF /* School.swift */; };
+		483D78562223B1E9008F72C5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483D78552223B1E9008F72C5 /* DetailViewController.swift */; };
 		8F548EE44F1BDE81B8F00799 /* Pods_csc436lab7Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD54995FEEC27745307ECDC /* Pods_csc436lab7Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		48151258222074D300E0AAEF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = /Users/elabouve/Documents/csc436/labs/csc436lab7/csc436lab7/MapViewController.swift; sourceTree = "<absolute>"; };
 		4815125A2220753B00E0AAEF /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		4815125F2220788F00E0AAEF /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		483D78552223B1E9008F72C5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6A1BCF2CB31E396C5616BD4D /* Pods-csc436lab7Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-csc436lab7Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-csc436lab7Tests/Pods-csc436lab7Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F2A9EBAE948BDC410E81E81 /* Pods-csc436lab7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-csc436lab7.debug.xcconfig"; path = "Pods/Target Support Files/Pods-csc436lab7/Pods-csc436lab7.debug.xcconfig"; sourceTree = "<group>"; };
 		838C0623394DFD5794880A1F /* Pods_csc436lab7.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_csc436lab7.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +184,7 @@
 			children = (
 				481512282220682700E0AAEF /* ViewController.swift */,
 				48151258222074D300E0AAEF /* MapViewController.swift */,
+				483D78552223B1E9008F72C5 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				481512272220682700E0AAEF /* AppDelegate.swift in Sources */,
 				4815125722206C1D00E0AAEF /* SchoolService.swift in Sources */,
 				48151259222074D300E0AAEF /* MapViewController.swift in Sources */,
+				483D78562223B1E9008F72C5 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
